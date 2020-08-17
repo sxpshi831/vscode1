@@ -305,7 +305,7 @@ func addUser(db *sqlx.DB, user *User) error {
 	return err
 }
 
-//修改用户
+//用户修改
 func updateUser(db *sqlx.DB, user *User) (int64, error) {
 	result, err := db.Exec("UPDATE user SET name=?,age=? WHERE id=?", user.Name, user.Age, user.ID)
 	if err != nil {
